@@ -3,6 +3,9 @@ package com.example.jisungkim.app;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -43,4 +46,39 @@ public class Date extends AppCompatActivity {
         ListView list=(ListView)findViewById(R.id.list_item);
         list.setAdapter(adapter);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //상단 메뉴바 인플레이트 한다
+        getMenuInflater().inflate(R.menu.menu_main2,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+//        메뉴아이템 누르면 넘어가는 인덴트 만들어야 함
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_callCompany) {
+//            Intent i2 = new Intent(this, Main10Activity.class);
+//            startActivityForResult(i2,102);
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }

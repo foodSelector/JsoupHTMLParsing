@@ -2,5 +2,8 @@
     <string name="app_name">APP</string>
     <string name="empty_description">No description available.</string>
     <string name="map_view_demo_title">MapView</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_rating">별점주기</string>
 </resources>
 

@@ -88,13 +88,6 @@ public class Alone extends AppCompatActivity implements MapView.CurrentLocationE
         list.setAdapter(adapter);
     }
 
-
-//   public void mOnClick2(View v){
-//        Intent i=new Intent(this,Date.class);
-//        startActivity(i);
-//    }
-
-
     public void mOnClick(View v){
         Intent intent=getIntent();
         String mtext=intent.getStringExtra("a3");
